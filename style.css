@@ -1,0 +1,410 @@
+/*Estilo geral da página*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    gap: 50px;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #66cc66;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 8px #66cc66;
+    color: #fff;
+    transform: scale(1.07);
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 34px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #66cc66;
+    text-align: center;
+}
+
+section {
+    padding: 50px 4%
+}
+
+/* Estilo cabeçalho */
+
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #7d7d7d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    /* mantém a proporção da imagem */
+}
+
+/*Estilo Menu Mobile*/
+
+.btn-abrir-menu i{
+    color: #66cc66;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px 4%;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #66cc66;
+    color: #000;
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color: #66cc66;
+    font-size: 35px;
+}
+
+/*Estilo do topo do site*/
+
+section .topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-do-site .text-topo-site h1 {
+    color: #fff;
+    font-size: 34px;
+}
+
+.topo-do-site .text-topo-site h1 span {
+    color: #66cc66;
+    font-size: 40px;
+}
+
+.topo-do-site .text-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.img-topo-site img {
+    width: 300px;
+    height: auto;
+    /* mantém a proporção da imagem */
+    border-radius: 200px;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    /*nome da animação/tempo para ser concluida/velocidade da animação/funciona infinitamente/alternar para dar suavidade*/
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px
+    }
+}
+
+/*Estilo das Especialidades*/
+
+section .especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border: 2px solid #fff;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff78;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 50px;
+    color: #66cc66;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+/*Estilo Sobre Mim*/
+
+.img-sobre img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #66cc66;
+    display: block; /*para o span ficar na linha de baixo*/
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #66cc66;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/*Estilo do Formulário*/
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #313131;
+    border: none;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    color: #000;
+    background-color: #66cc66;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+form .btn-enviar input:hover {
+    color: #fff;
+    transform: scale(1.07);
+}
+
+/*Estilo Footer*/
+
+.logo-footer img {
+    width: 100px;
+    height: auto;
+    /* mantém a proporção da imagem */
+}
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+.borda {
+    border-top: 2px solid #66cc66;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+footer .line-footer p i {
+    color: #66cc66;
+    font-size: 22px;
+    padding: 5px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+/*Responsivo*/
+/*será aplicado para navegadores menores que 1020px*/
+@media screen and (max-width: 1020px) {
+
+    /*Cabeçalho*/
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    /*Classes Gerais*/
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    section {
+        padding: 30px 8%;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+    }
+
+    /*Topo do Site*/
+    .topo-do-site .text-topo-site h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    /*Especialidades*/
+    .especialidades .especialidades-box{
+        margin-top: 30px;
+    }
+
+    /*Sobre*/
+    .btn-social{
+        text-align: center;
+    }
+    
+    /*Footer*/
+    footer .flex{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer{
+        padding: 30px 8%;
+    }
+
+}
+
+@media screen and (min-width: 1020px) {
+    .btn-abrir-menu,
+    .menu-mobile {
+        display: none;
+    }
+}
